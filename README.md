@@ -384,9 +384,10 @@ git commit -m "ci(jenkins): add declarative Jenkinsfile with 7-stage pipeline
 - JUnit results published to Jenkins UI"
 
 ## Project has been integrated to jenkins via the vm instance spawned through osha portal. Screenshots of the same are attached below:
-- Configuration
+- [Configuration](https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105)
+
 <img width="1007" height="887" alt="image" src="https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105" />
-- Build Status
+- [Build Status](https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb)
 <img width="1697" height="951" alt="image" src="https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb" />
 
 
