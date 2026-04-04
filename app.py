@@ -17,12 +17,15 @@ PROGRAMS = {
     "Fat Loss": {
         "workout": ("Mon: 5x5 Back Squat + AMRAP | Tue: EMOM 20min Cardio | Wed: Bench Press + 21-15-9 | "
         "Thu: Deadlifts/Box Jumps | Fri: Active Recovery"),
-        "diet": "Breakfast: 3 Egg Whites + Oats | Lunch: Grilled Chicken + Brown Rice | Dinner: Fish + Millet Roti | Target: 2000 kcal",
+        "diet": ("Breakfast: 3 Egg Whites + Oats | Lunch: Grilled Chicken + Brown Rice | "
+        "Dinner: Fish + Millet Roti | Target: 2000 kcal"),
         "calories": 2000
     },
     "Muscle Gain": {
-        "workout": "Mon: Squat 5x5 | Tue: Bench 5x5 | Wed: Deadlift 4x6 | Thu: Front Squat 4x8 | Fri: Incline Press 4x10 | Sat: Rows 4x10",
-        "diet": "Breakfast: 4 Eggs + PB Oats | Lunch: Chicken Biryani | Dinner: Mutton Curry + Rice | Target: 3200 kcal",
+        "workout": ("Mon: Squat 5x5 | Tue: Bench 5x5 | Wed: Deadlift 4x6 | Thu: Front Squat 4x8 | "
+        "Fri: Incline Press 4x10 | Sat: Rows 4x10"),
+        "diet": ("Breakfast: 4 Eggs + PB Oats | Lunch: Chicken Biryani | "
+        "Dinner: Mutton Curry + Rice | Target: 3200 kcal"),
         "calories": 3200
     },
     "Beginner": {
