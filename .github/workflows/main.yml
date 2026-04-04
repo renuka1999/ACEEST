@@ -98,6 +98,11 @@ jobs:
         run: |
           docker load -i aceest-image.tar
 
+      - name: Prepare test-results directory
+        run: |
+          mkdir -p test-results
+          chmod 777 test-results
+
       # Run the full Pytest suite INSIDE the container
       # Mount test file in, mount results out
       - name: Run Pytest inside Docker container
