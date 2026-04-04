@@ -15,7 +15,8 @@ DB_NAME = os.environ.get("DB_NAME", "aceest_fitness.db")
 # ---------- FITNESS PROGRAMS ----------
 PROGRAMS = {
     "Fat Loss": {
-        "workout": "Mon: 5x5 Back Squat + AMRAP | Tue: EMOM 20min Cardio | Wed: Bench Press + 21-15-9 | Thu: Deadlifts/Box Jumps | Fri: Active Recovery",
+        "workout": ("Mon: 5x5 Back Squat + AMRAP | Tue: EMOM 20min Cardio | Wed: Bench Press + 21-15-9 | "
+        "Thu: Deadlifts/Box Jumps | Fri: Active Recovery"),
         "diet": "Breakfast: 3 Egg Whites + Oats | Lunch: Grilled Chicken + Brown Rice | Dinner: Fish + Millet Roti | Target: 2000 kcal",
         "calories": 2000
     },
