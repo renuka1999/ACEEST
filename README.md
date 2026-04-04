@@ -383,14 +383,6 @@ git commit -m "ci(jenkins): add declarative Jenkinsfile with 7-stage pipeline
 - Stages: Checkout, Setup, Lint, Tests, Docker Build, Smoke Test, Push
 - JUnit results published to Jenkins UI"
 
-## Project has been integrated to jenkins via the vm instance spawned through osha portal. Screenshots of the same are attached below:
-- [Configuration](https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105)
-
-<img width="1007" height="887" alt="image" src="https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105" />
-- [Build Status](https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb)
-<img width="1697" height="951" alt="image" src="https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb" />
-
-
 # 7. Docs
 git add README.md
 git commit -m "docs: add professional README with Jenkins integration guide"
@@ -409,4 +401,11 @@ git checkout -b infra/docker-multi-stage
 git checkout -b ci/github-actions-pipeline
 ```
 
+
+### Project has been integrated to jenkins via the vm instance spawned through osha portal. Screenshots of the same are attached below:
+- [Configuration](https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105)
+
+<img width="1007" height="887" alt="image" src="https://github.com/user-attachments/assets/293d5bec-d8b3-4fac-bd53-1bb638064105" />
+- [Build Status](https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb)
+<img width="1697" height="951" alt="image" src="https://github.com/user-attachments/assets/fc6031b2-1655-4130-85f7-5e4f086976cb" />
 
