@@ -136,7 +136,6 @@ pipeline {
         // ----------------------------------------------------------
         // Optional: Push to Docker Hub (only on main branch)
         stage('Push to Registry') {
-            when { branch 'origin/main' }
             steps {
                 script {
                     def appVersion = readFile('VERSION').trim()
