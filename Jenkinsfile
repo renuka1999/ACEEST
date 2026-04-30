@@ -166,7 +166,7 @@ pipeline {
                     sh """
                         . venv/bin/activate
                         pip install coverage --quiet
-                        sonar-scanner \
+                        /opt/sonar-scanner/bin/sonar-scanner \
                         -Dsonar.projectKey=aceest-fitness \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://localhost:9000 \
