@@ -136,21 +136,28 @@ pipeline {
         // ----------------------------------------------------------
         // Optional: Push to Docker Hub (only on main branch)
         stage('Push to Registry') {
-            when {
-                branch 'main'
-            }
+            when { branch 'main' }
             steps {
-                echo "=== Pushing image to Docker registry ==="
-                // Uncomment and configure credentials when ready:
-                // withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                //     sh """
-                //         echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
-                //         docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
-                //         docker push ${DOCKER_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
-                //         docker push ${DOCKER_REPO}/${IMAGE_NAME}:latest
-                //     """
-                // }
-                echo "Push step ready — configure Docker Hub credentials to enable"
+                script {
+                    def appVersion = readFile('VERSION').trim()
+                    def imageTag = "v${appVersion}"
+                    def buildTag = "build-${env.BUILD_NUMBER}"
+                    withCredentials([usernamePassword(
+                        credentialsId: 'dockerhub-creds',
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASS'
+                    )]) {
+                        sh """
+                            echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
+                            docker tag ${IMAGE_NAME}:${IMAGE_TAG} \$DOCKER_USER/aceest-fitness:${imageTag}
+                            docker tag ${IMAGE_NAME}:${IMAGE_TAG} \$DOCKER_USER/aceest-fitness:${buildTag}
+                            docker tag ${IMAGE_NAME}:${IMAGE_TAG} \$DOCKER_USER/aceest-fitness:latest
+                            docker push \$DOCKER_USER/aceest-fitness:${imageTag}
+                            docker push \$DOCKER_USER/aceest-fitness:${buildTag}
+                            docker push \$DOCKER_USER/aceest-fitness:latest
+                        """
+                    }
+                }
             }
         }
 
