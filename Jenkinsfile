@@ -160,6 +160,23 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            steps {
+                withCredentials([string(credentialsId: 'sonarqube-token', variable: 'SONAR_TOKEN')]) {
+                    sh """
+                        . venv/bin/activate
+                        pip install coverage --quiet
+                        sonar-scanner \
+                        -Dsonar.projectKey=aceest-fitness \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://localhost:9000 \
+                        -Dsonar.login=\$SONAR_TOKEN \
+                        -Dsonar.python.coverage.reportPaths=test-results/coverage.xml
+                    """
+                }
+            }
+        }
+
     }
 
     post {
